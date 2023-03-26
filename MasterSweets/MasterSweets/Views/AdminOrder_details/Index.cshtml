@@ -1,0 +1,50 @@
+﻿@model IEnumerable<MasterSweets.Models.order_details>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1 style="text-align:center" class="mt-4">Order Details</h1>
+<br />
+<br />
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.order.user_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.product.product_name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order.user_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.product.product_name)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.order_detail_id }, new { @class = "btn btn-primary" })
+            </td>
+        </tr>
+    }
+
+</table>

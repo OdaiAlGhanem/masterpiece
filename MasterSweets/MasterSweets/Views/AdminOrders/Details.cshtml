@@ -1,0 +1,83 @@
+﻿@model MasterSweets.Models.order
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.order_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.order_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.delivery_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.delivery_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.delivery_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.delivery_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total_amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.payment_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.payment_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.guest.session_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.guest.session_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.order_states.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.order_states.name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.order_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

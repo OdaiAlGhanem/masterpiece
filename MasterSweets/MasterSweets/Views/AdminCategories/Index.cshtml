@@ -1,0 +1,111 @@
+﻿@model IEnumerable<MasterSweets.Models.category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .thumbnail {
+        top: -50px;
+        left: -35px;
+        /*        display: block;
+*/ z-index: 999;
+        cursor: pointer;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease;
+    }
+        
+        .thumbnail:hover {
+            transform: scale(2);
+        }
+</style>
+<h1 style="text-align:center" class="mt-4">Categories</h1>
+<br />
+<br />
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success" })
+</p>
+
+<section class="d-flex justify-content-center" id="hh" style="text-align:center">
+    <div class="form-group" style="text-align:center">
+        <div class="input-group">
+            @using (Html.BeginForm("Index", "AdminCategories", FormMethod.Get))
+            {<div style="display:inline">
+                    <div>
+                        <input type="text" class="form-control" placeholder="Search by category name" name="searchName" value="@ViewBag.CurrentFilter" />
+                    </div>
+
+                    <div class="input-group-append" style="text-align:center;">
+                        <button class="btn btn-secondary" type="submit">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<table class="table table-hover">
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.category_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category_des)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category_des2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category_image1)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.category_image2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category_image3)
+        </th>*@
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.category_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category_des)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category_des2)
+            </td>
+            <td style="display:flex; flex-wrap:wrap; justify-content:center">
+
+                @*@Html.DisplayFor(modelItem => item.category_image1)*@
+                <img class="thumbnail d-flex justify-content-center" style="width:100px; align-content:center " src="~/Images/@item.category_image1" alt="category_image1" />
+            </td>
+            @*<td style="display:flex; flex-wrap:wrap; justify-content:center">
+
+                @Html.DisplayFor(modelItem => item.category_image2)
+                <img class="thumbnail d-flex justify-content-center" style="width:100px; align-content:center " src="~/Images/@item.category_image1" alt="category_image1" />
+            </td>
+            <td style="display:flex; flex-wrap:wrap; justify-content:center">
+
+                @Html.DisplayFor(modelItem => item.category_image3)
+                <img class="thumbnail d-flex justify-content-center" style="width:100px; align-content:center " src="~/Images/@item.category_image1" alt="category_image1" />
+            </td>*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.category_id }, new { @class = "btn btn-success" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.category_id }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.category_id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

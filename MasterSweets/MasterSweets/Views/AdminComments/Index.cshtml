@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MasterSweets.Models.comment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 style="text-align:center" class="mt-4">Comments</h1>
+<br />
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.guest_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comment_text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comment_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.product.product_name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.guest_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comment_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comment_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.product.product_name)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.comment_id }, new { @class = "btn btn-primary" }) 
+                @Html.ActionLink("Delete", "Delete", new { id = item.comment_id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

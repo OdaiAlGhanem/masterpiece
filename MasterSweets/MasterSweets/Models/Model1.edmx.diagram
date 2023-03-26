@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d42e6a4be2e74f5ca37e7f56fe9e810b" Name="Diagram1">
+        <EntityTypeShape EntityType="EcommerceMasterModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.AspNetRole" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.AspNetUser" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.cart" Width="1.5" PointX="8.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.category" Width="1.5" PointX="3.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.comment" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.guest" Width="1.5" PointX="6" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.order_details" Width="1.5" PointX="10.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.order_states" Width="1.5" PointX="6" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.order" Width="1.5" PointX="8.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.payment" Width="1.5" PointX="10.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.product" Width="1.5" PointX="6" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceMasterModel.sysdiagram" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="EcommerceMasterModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.FK__cart__user_id__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.fk_comments_users" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.fk_orders_users" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.FK__cart__guest_id__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.FK__cart__product_id__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.FK__products__catego__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.fk_comments_products" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.fk_orders_guests" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.FK__order_det__order__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.FK__order_det__produ__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.fk_orders_states" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.fk_payments_orders" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceMasterModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MasterSweets.Models.payment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 style="text-align:center" class="mt-4">Payments</h1>
+<br />
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.payment_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.order.user_id)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.payment_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order.user_id)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.payment_id }, new { @class = "btn btn-primary" })
+            </td>
+        </tr>
+    }
+
+</table>

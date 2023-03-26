@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/Temp/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Temp/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="~/Temp/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="~/Temp/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="~/Temp/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Temp/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/Temp/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/Temp/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Temp/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Temp/css/style.css" type="text/css">
+    <style>
+        .imgfooter
+        {
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__cart">
+            <div class="offcanvas__cart__links">
+                <a href="#" class="search-switch"><img src="../Temp/img/icon/search.png" alt=""></a>
+                <a href="#"><img src="~/Temp/img/icon/heart.png" alt=""></a>
+            </div>
+            <div class="offcanvas__cart__item">
+                <a href="~/Views/Home/shoopingcart.cshtml"><img src="../Temp/img/icon/cart.png" alt=""> <span>0</span></a>
+                <div class="cart__price">Cart: <span>$0.00</span></div>
+            </div>
+        </div>
+        <div class="offcanvas__logo">
+            <a href="~/Views/Home/Index.cshtml"><img style="height:100px;" src="../Temp/img/logoalsharq.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__option">
+            <ul>
+                <li>
+                    USD <span class="arrow_carrot-down"></span>
+                    <ul>
+                        <li>EUR</li>
+                        <li>USD</li>
+                    </ul>
+                </li>
+                <li>
+                    ENG <span class="arrow_carrot-down"></span>
+                    <ul>
+                        <li>Spanish</li>
+                        <li>ENG</li>
+                    </ul>
+                </li>
+                <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span><1 /li>
+            </ul>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row navr">
+                    <div class="col-lg-12">
+                        <div class="header__top__inner">
+                            <div class="header__top__left">
+                                <h4>Al Sharq Al Arabi Sweets</h4>
+                                <h5>02/7272816 - Irbid - Downtown</h5>
+                            </div>
+                            <div class="header__logo">
+                                <a href="~/Views/Home/Index.cshtml"><img style="height:70px;" src="../Temp/img/logoalsharq.png" alt=""></a>
+                            </div>
+                            <div class="header__top__right">
+                                <div class="header__top__right__links">
+                                    <a href="#" class="search-switch"><img src="../Temp/img/icon/search.png" alt=""></a>
+                                    <a href="#"><img src="~/Temp/img/icon/heart.png" alt=""></a>
+                                </div>
+                                <div class="header__top__right__cart">
+                                    <a href="~/Views/Home/checkout.cshtml"><img src="../Temp/img/icon/cart.png" alt=""> <span>0</span></a>
+                                    <div class="cart__price">Cart: <span>$0.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas__open"><i class="fa fa-bars"></i></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Shop", "shop", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+
+
+                            <li>
+                                <a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li>@Html.ActionLink("Shop Details", "shopdetails", "Home")</li>
+                                    <li>@Html.ActionLink("Shoping Cart", "shoopingcart", "Home")</li>
+                                    <li>@Html.ActionLink("Check Out", "checkout", "Home")</li>
+                                    <li>@Html.ActionLink("Blog Details", "shopdetails", "Home")</li>
+                                </ul>
+                            </li>
+                            <li>@Html.Partial("_LoginPartial")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <div class="body-content">
+        @RenderBody()
+        <hr />
+        <!-- Footer Section Begin -->
+        <footer class="footer set-bg" data-setbg="../Temp/img/footer-bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__widget">
+                            <div class="contact__address__item">
+                                <ul>
+                                    <li>
+                                        <span class="icon_pin_alt"></span>
+                                        <p>Arar street, Irbid, Jordan</p>
+                                    </li>
+                                    <li>
+                                        <span class="icon_headphones"></span>
+                                        <p>+96227272816</p>
+                                    </li>
+                                    <li>
+                                        <span class="icon_mail_alt"></span>
+                                        <p>alsharqalarabisweet@gmail.com</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__about">
+                            <div class="footer__logo">
+                                <a href="#"><img class="imgfooter" src="../Temp/img/logoalsharq.png" alt=""></a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore dolore magna aliqua.
+                            </p>
+                            <div class="footer__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__newslatter">
+                            <h6>Subscribe</h6>
+                            <p>Get latest updates and offers.</p>
+                            <form action="#">
+                                <input type="text" placeholder="Email">
+                                <button type="submit"><i class="fa fa-send-o"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <p class="copyright__text text-white">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="copyright__widget">
+                                <ul>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Site Map</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+        <!-- Search Begin -->
+        <div class="search-model">
+            <div class="h-100 d-flex align-items-center justify-content-center">
+                <div class="search-close-switch">+</div>
+                <form class="search-model-form">
+                    <input type="text" id="search-input" placeholder="Search here.....">
+                </form>
+            </div>
+        </div>
+        <!-- Search End -->
+    </div>
+    <!-- Js Plugins -->
+    <script src="~/Temp/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Temp/js/bootstrap.min.js"></script>
+    <script src="~/Temp/js/jquery.nice-select.min.js"></script>
+    <script src="~/Temp/js/jquery.barfiller.js"></script>
+    <script src="~/Temp/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Temp/js/jquery.slicknav.js"></script>
+    <script src="~/Temp/js/owl.carousel.min.js"></script>
+    <script src="~/Temp/js/jquery.nicescroll.min.js"></script>
+    <script src="~/Temp/js/main.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

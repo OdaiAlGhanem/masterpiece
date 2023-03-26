@@ -1,0 +1,73 @@
+﻿@model IEnumerable<MasterSweets.Models.guest>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 style="text-align:center" class="mt-4">Guests</h1>
+<br />
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.session_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guest_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guest_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guest_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guest_street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guest_city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guest_buldingNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guest_phone)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.session_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.guest_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.guest_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.guest_address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.guest_street)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.guest_city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.guest_buldingNO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.guest_phone)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.guest_id }, new { @class = "btn btn-primary" })
+            </td>
+        </tr>
+    }
+
+</table>

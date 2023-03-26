@@ -1,0 +1,61 @@
+﻿@model MasterSweets.Models.category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>category</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.category_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category_des)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category_des)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category_des2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category_des2)
+        </dd>
+
+        <dt class="col-sm-3">Image</dt>
+        <dd class="col-sm-9"><img style="width:200px;" src="@Url.Content("~/Images/" + Model.category_image1)" alt="Image" /></dd>
+        @*<dt>
+            @Html.DisplayNameFor(model => model.category_image2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category_image2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category_image3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category_image3)
+        </dd>*@
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.category_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

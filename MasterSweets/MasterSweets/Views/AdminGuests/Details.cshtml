@@ -1,0 +1,83 @@
+﻿@model MasterSweets.Models.guest
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>guest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.session_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.session_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.guest_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.guest_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.guest_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.guest_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.guest_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.guest_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.guest_street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.guest_street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.guest_city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.guest_city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.guest_buldingNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.guest_buldingNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.guest_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.guest_phone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.guest_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
