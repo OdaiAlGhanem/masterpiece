@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Master Sweet Docs", "Master Sweet Docs\Master Sweet Docs.csproj", "{F03CC38C-0A0E-4691-89E1-CC2D8BF7D023}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F03CC38C-0A0E-4691-89E1-CC2D8BF7D023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03CC38C-0A0E-4691-89E1-CC2D8BF7D023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03CC38C-0A0E-4691-89E1-CC2D8BF7D023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03CC38C-0A0E-4691-89E1-CC2D8BF7D023}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACC74B66-A2E3-4DD1-BE4B-63C846BFFD19}
+	EndGlobalSection
+EndGlobal
